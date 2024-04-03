@@ -1,7 +1,7 @@
 {
-  "name": "private-pdf",
+  "name": "cladfy-eSign",
   "version": "0.0.1",
-  "description": "PrivatePDF is a free web tool that lets users make quick PDF edits from within their web browser, without uploading anything anywhere.",
+  "description": "cladfy-eSign is a free web tool that lets users make quick PDF edits from within their web browser, without uploading anything anywhere.",
   "main": "dist/bundle.js",
   "dependencies": {
     "path": "^0.12.7",

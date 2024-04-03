@@ -280,7 +280,7 @@ export class Controller {
 
       const bytes = await pdfDocument.savePdf(formInputValues, overlays);
 
-      this.view.downloadBlob(bytes, "privatepdf-" + fileName);
+      this.view.downloadBlob(bytes, "Cladfy-eSign -" + fileName);
     });
 
     this.view.setOnInsertTextClickListener();

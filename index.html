@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="google" content="notranslate" />
-    <title>PrivatePDF - edit PDFs in the browser</title>
+    <title>
+      Cladfy Documents | e-Sign your contracts, agreements... and edit PDFs
+      online
+    </title>
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 
     <style>
       :root {
         --toolbar-height: 65px;
       }
       body {
-        background-color: #87898b;
+        background-color: whitesmoke;
         margin: 0;
         padding: 0;
         font-family: sans-serif;
@@ -117,8 +122,8 @@
         display: none;
       }
       #overlayContainer .draggable.unfocused input[type="text"] {
-        background-color: lightyellow;
-        border: 1px #e2e2ce7d solid;
+        background-color: transparent;
+        border: 1px transparent solid;
       }
       #overlayContainer .draggable.focused input[type="text"] {
         background-color: white;
@@ -213,9 +218,9 @@
         justify-content: center;
       }
       #empty-state-inner {
-        background: #f9f9f9;
+        background: #4978bc;
         padding: 15px;
-        border-radius: 15px;
+        border-radius: 9px;
       }
       #top-bar {
         display: flex;
@@ -237,6 +242,71 @@
       }
       #socials a img {
         display: block;
+      }
+
+      .main-content {
+      }
+
+      .main-header-wrap {
+        margin-top: 10%;
+        padding-bottom: 6em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6em;
+      }
+
+      .main-header {
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+      }
+
+      .main-header article {
+        flex: 1 1 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      .main-header article h1 {
+        font-size: 1.5rem;
+      }
+
+      .main-header article .link-box {
+        align-self: flex-start;
+        padding: 0.5em 1em;
+        color: #000;
+        text-decoration: none;
+        border: 0.1em solid #000;
+        border-radius: 0.3em;
+        transition: box-shadow 0.4s ease-in-out;
+        margin-bottom: 10px;
+      }
+
+      .main-header article a:hover {
+        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+      }
+
+      .main-header svg {
+        flex: 1 1 20%;
+        font-size: 10em;
+        scale: 1;
+        transition: scale 0.4s ease-in-out;
+      }
+
+      .main-header svg:hover {
+        scale: 1.1;
+      }
+      .go-pro-wrap {
+        bottom: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6em;
+      }
+      .bold{
+        font-weight: 900;
       }
     </style>
 
@@ -380,12 +450,20 @@
         </div>
       </div>
       <div id="socials">
-        <a
-          href="https://github.com/photown/private-pdf"
-          target="_blank"
-          title="View source code on GitHub"
-        >
-          <img src="img/github.png" />
+        <a href="#" class="go-pro"
+        style=" 
+        border: 1px solid rgb(225, 224, 224); 
+        text-decoration: none; 
+        color: rgb(118, 118, 118); 
+        margin-right: 12px;
+        padding: 0.5rem;
+        font-family: sans-serif;
+        border-radius: 0.3rem;"
+        title="Go Pro">
+          Pro (coming soon)
+        </a>
+        <a href="#" title="Home">
+          <img height="40" width="120" src="img/logo.png" />
         </a>
       </div>
     </div>
@@ -399,13 +477,64 @@
         </div>
       </div>
     </div>
-    <div id="empty-state">
-      <div id="empty-state-inner">
-        <a href="#" onclick="document.getElementById('pdf-file-input').click()"
-          >Pick a PDF file to modify.</a
+    <div class="main-content">
+      <div class="main-header-wrap">
+        <section class="main-header">
+          <article>
+            <h1>The eSigning platform for Microfinance lenders.</h1>
+            <p>Upload your document to easily add <span class="bold">Text </span> [ new text ... ],  <span class="bold">Business Stamp 🕹</span> and  multiple <span class="bold"> e-Signatures </span> ᝰ.ᐟ.
+
+            <p>Designed for your:</p>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <a class="link-box" >Agreements</a>
+              <a class="link-box" >Contracts</a>
+              <a class="link-box" >Letters</a>
+              <a class="link-box" >Forms</a>
+            </div>
+            <hr>
+            <span class="bold"> eSigning hints</span>
+              <span>
+                - Take a photo of your signature/stamp from a plain paper.
+              </span>
+              <span>
+                - Get a transparent image of the photo you took <a href="https://www.remove.bg/upload" class="bold" style="text-decoration: underline;" target="_blank"> here.</a>
+              </span>
+              <span>
+                - Upload the transparent image to e-Sign/e-Stamp.
+              </span>
+              <span>
+                - Use an 'X' to indicate selected checkboxes..
+              </span>
+
+
+           
+          
+
+          </article>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 512 512"
+           
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
+            />
+          </svg>
+        </section>
+      </div>
+
+      <div id="empty-state">
+        <a
+        href="#"
+        style="text-decoration: none; color: #ffffff"
+        onclick="document.getElementById('pdf-file-input').click()"
         >
-        Don't worry, it doesn't get uploaded anywhere - it all runs in your
-        browser!
+        <div id="empty-state-inner">
+         Choose a PDF File
+        </div>
+      </a>
       </div>
     </div>
 
